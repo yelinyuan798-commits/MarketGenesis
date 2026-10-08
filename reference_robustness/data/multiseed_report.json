@@ -1,0 +1,186 @@
+{
+  "status": "same_family_multiseed_stability_not_external_validation",
+  "protocol_version": "MarketGenesis-v2.1-multiseed",
+  "preregistration_sha256": "5df00723a692df341d70606ae97b69c9a82b3d3d35520655d160c47529dbe377",
+  "design": {
+    "n_seed_batches": 20,
+    "replicates_per_seed_batch": 320,
+    "paired_paths_per_dose_total": 6400,
+    "root_seeds": [
+      2632567035,
+      2984893173,
+      3152201897,
+      1479823078,
+      1864755577,
+      677312347,
+      2069308620,
+      3089988897,
+      2464771100,
+      2241986250,
+      4259429181,
+      3174995711,
+      2125615873,
+      985169424,
+      1553271648,
+      1087328947,
+      3244082578,
+      3014078332,
+      4030087925,
+      1603902690
+    ],
+    "all_batches_retained": true,
+    "candidate_worlds_per_seed_batch": 700,
+    "candidate_world_records_total": 14000,
+    "candidate_accept_fraction": 0.1,
+    "accepted_worlds_per_seed_batch": 70
+  },
+  "exact_controls": {
+    "maximum_pre_observable_difference_across_batches": 0.0,
+    "maximum_zero_dose_post_difference_across_batches": 0.0
+  },
+  "dose_2_drawdown_difference_pp": {
+    "mean": 4.269184282501195,
+    "root_bootstrap_ci_low": 4.26111444538933,
+    "root_bootstrap_ci_high": 4.277613737813982,
+    "standard_deviation_between_seed_batches": 0.019120441215306504,
+    "q05": 4.243620068046885,
+    "median": 4.2693586981089275,
+    "q95": 4.300768641912358,
+    "minimum": 4.230445592023235,
+    "maximum": 4.305693875397055,
+    "positive_batch_count": 20,
+    "total_batch_count": 20
+  },
+  "dose_2_peak_spread_difference_bps": {
+    "mean": 16.446419762045487,
+    "root_bootstrap_ci_low": 16.40526913629975,
+    "root_bootstrap_ci_high": 16.487476957153245,
+    "standard_deviation_between_seed_batches": 0.09483128487759575,
+    "q05": 16.338714326640794,
+    "median": 16.445627202209536,
+    "q95": 16.601016341691707,
+    "minimum": 16.240731002433694,
+    "maximum": 16.615593251714717,
+    "positive_batch_count": 20,
+    "total_batch_count": 20
+  },
+  "abc_parameter_distance_relative_reduction": {
+    "mean": 0.11890449952975342,
+    "root_bootstrap_ci_low": 0.09289577079045579,
+    "root_bootstrap_ci_high": 0.13872841312378167,
+    "standard_deviation_between_seed_batches": 0.05440759288139047,
+    "q05": -0.020677760247560826,
+    "median": 0.13672563426080608,
+    "q95": 0.15843402778523016,
+    "minimum": -0.04303750367932224,
+    "maximum": 0.15888617461135313,
+    "positive_batch_count": 18,
+    "total_batch_count": 20
+  },
+  "abc_holdout_response_relative_reduction": {
+    "mean": 0.43734114019133247,
+    "root_bootstrap_ci_low": 0.35153829705847583,
+    "root_bootstrap_ci_high": 0.5013681172730802,
+    "standard_deviation_between_seed_batches": 0.1780029295520081,
+    "q05": -0.05214751897474168,
+    "median": 0.48923455009690725,
+    "q95": 0.5638532887425629,
+    "minimum": -0.08409489972318829,
+    "maximum": 0.5691967083286322,
+    "positive_batch_count": 18,
+    "total_batch_count": 20
+  },
+  "candidate_world_generation": {
+    "same_simulator_equations": true,
+    "sampling_method": "independent uniform draws over eight declared parameter ranges",
+    "parameter_names": [
+      "leverage",
+      "latent_inventory",
+      "margin_buffer",
+      "liquidation_base",
+      "liquidation_gain",
+      "crowding",
+      "liquidity_withdrawal",
+      "liquidity_inventory_sensitivity"
+    ],
+    "parameter_ranges": {
+      "leverage": [
+        1.3,
+        7.0
+      ],
+      "latent_inventory": [
+        0.3,
+        1.1
+      ],
+      "margin_buffer": [
+        0.016,
+        0.06
+      ],
+      "liquidation_base": [
+        0.012,
+        0.052
+      ],
+      "liquidation_gain": [
+        1.5,
+        6.5
+      ],
+      "crowding": [
+        0.25,
+        1.1
+      ],
+      "liquidity_withdrawal": [
+        2.5,
+        8.5
+      ],
+      "liquidity_inventory_sensitivity": [
+        0.08,
+        0.38
+      ]
+    },
+    "generation_seed_formula": "root_seed + 77777",
+    "candidate_records_total": 14000
+  },
+  "acceptance_design": {
+    "ranking_variable": "active_probe_distance",
+    "rule": "smallest-distance top 10 percent within each seed batch",
+    "accepted_count_is_quality_metric": false,
+    "quality_endpoints": [
+      "relative reduction in normalized parameter distance",
+      "relative reduction in independent holdout response RMSE"
+    ]
+  },
+  "implementation_boundary": {
+    "current_stage": "synthetic_same_family_proof_of_concept",
+    "terminal_target": "Active Multi-Hypothesis World Model",
+    "terminal_target_status": "aspirational_not_implemented",
+    "not_implemented": [
+      "real-market calibration",
+      "learned candidate-world generator",
+      "counterfactual robust planner",
+      "physical robot validation"
+    ]
+  },
+  "protocol_locking_note": "The protocol is written and hashed before simulation within the same run; this proves in-run immutability, not external timestamped preregistration.",
+  "predeclared_gates": {
+    "all_pre_observable_controls_exact": true,
+    "all_zero_dose_controls_exact": true,
+    "drawdown_all_20_root_means_positive": true,
+    "drawdown_root_bootstrap_ci_above_zero": true,
+    "spread_all_20_root_means_positive": true,
+    "spread_root_bootstrap_ci_above_zero": true,
+    "abc_parameter_improved_at_least_16_of_20": true,
+    "abc_parameter_root_bootstrap_ci_above_zero": true,
+    "abc_holdout_improved_at_least_16_of_20": true,
+    "abc_holdout_root_bootstrap_ci_above_zero": true
+  },
+  "passed_all_predeclared_gates": true,
+  "claims_supported": [
+    "The two primary dose-2 effects can be evaluated across all predeclared root-seed batches.",
+    "Probe quality can be tested by parameter distance and an independent holdout response RMSE rather than the fixed acceptance count."
+  ],
+  "claims_not_supported": [
+    "Robustness across different simulator families, parameter ontologies, or real markets.",
+    "External validity for physical robot fleets.",
+    "That accepting 70 of 700 candidates is itself an identification result."
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "schema_version": "marketgenesis-result-v2.2",
+  "status": "synthetic_result_not_real_market_evidence",
+  "dose_experiment": {
+    "pre_observable_max_abs_difference": 0.0,
+    "zero_dose_post_observable_max_abs_difference": 0.0,
+    "n_replicates": 320,
+    "doses": [
+      0.0,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "common_random_numbers": true,
+    "world_specific_crash_branch": false
+  },
+  "headline_dose_2": {
+    "max_drawdown": {
+      "mean": 0.04254086018786383,
+      "ci_low": 0.04219013788768268,
+      "ci_high": 0.04288544554353609,
+      "positive_difference_fraction": 1.0
+    },
+    "terminal_return": {
+      "mean": -0.00013080489424505403,
+      "ci_low": -0.0001309678961951461,
+      "ci_high": -0.00013064002656886441,
+      "positive_difference_fraction": 0.0
+    },
+    "peak_spread_bps": {
+      "mean": 16.30804859600962,
+      "ci_low": 16.09892793469579,
+      "ci_high": 16.51350798226633,
+      "positive_difference_fraction": 1.0
+    },
+    "minimum_depth": {
+      "mean": -0.5974709202382236,
+      "ci_low": -0.6005356577955476,
+      "ci_high": -0.5944532699351893,
+      "positive_difference_fraction": 0.0
+    }
+  },
+  "abc": {
+    "method": "rejection ABC over a finite prior bank",
+    "bank_size": 700,
+    "passive_candidate_count": 700,
+    "accepted_after_probe": 70,
+    "accept_fraction": 0.1,
+    "accept_fraction_is_design_constant": true,
+    "accepted_count_is_not_quality_metric": true,
+    "probe_dose": 1.5,
+    "probe_horizon": 18,
+    "passive_pre_max_abs_distance": 0.0,
+    "candidate_generation": {
+      "same_simulator_equations": true,
+      "sampling_method": "independent uniform draws over eight declared parameter ranges",
+      "parameter_names": [
+        "leverage",
+        "latent_inventory",
+        "margin_buffer",
+        "liquidation_base",
+        "liquidation_gain",
+        "crowding",
+        "liquidity_withdrawal",
+        "liquidity_inventory_sensitivity"
+      ],
+      "parameter_ranges": {
+        "leverage": [
+          1.3,
+          7.0
+        ],
+        "latent_inventory": [
+          0.3,
+          1.1
+        ],
+        "margin_buffer": [
+          0.016,
+          0.06
+        ],
+        "liquidation_base": [
+          0.012,
+          0.052
+        ],
+        "liquidation_gain": [
+          1.5,
+          6.5
+        ],
+        "crowding": [
+          0.25,
+          1.1
+        ],
+        "liquidity_withdrawal": [
+          2.5,
+          8.5
+        ],
+        "liquidity_inventory_sensitivity": [
+          0.08,
+          0.38
+        ]
+      },
+      "bank_seed": 20338607,
+      "bank_size": 700,
+      "not_separate_algorithms": true
+    },
+    "prior_mean_normalized_parameter_distance": 0.3301716475872463,
+    "posterior_mean_normalized_parameter_distance": 0.27807724523807636,
+    "selection_probe": {
+      "dose": 1.5,
+      "horizon": 18,
+      "innovation_seed": 20349718
+    },
+    "independent_holdout": {
+      "doses": [
+        2.0,
+        4.0
+      ],
+      "horizon_points_per_dose": 30,
+      "innovation_seed": 20360829,
+      "used_for_candidate_ranking": false
+    },
+    "in_sample_predictive": {
+      "terminal_return": {
+        "truth": 0.00015756046756032482,
+        "prior_median": 0.00025141361775848914,
+        "posterior_median": 0.00023161460301235337,
+        "prior_median_absolute_error": 9.385315019816431e-05,
+        "posterior_median_absolute_error": 7.405413545202855e-05,
+        "prior_q05": 0.00019318095191028786,
+        "prior_q95": 0.00025141361775848914,
+        "posterior_q05": 0.00012027877978879609,
+        "posterior_q95": 0.00024836362307977254
+      },
+      "max_drawdown": {
+        "truth": 0.028813729141917266,
+        "prior_median": 0.021075094057537158,
+        "posterior_median": 0.022075889698852658,
+        "prior_median_absolute_error": 0.007738635084380108,
+        "posterior_median_absolute_error": 0.006737839443064608,
+        "prior_q05": 0.021075094057537158,
+        "prior_q95": 0.02527826774412668,
+        "posterior_q05": 0.021075094057537158,
+        "posterior_q95": 0.036572978644416936
+      },
+      "peak_spread_bps": {
+        "truth": 13.828984385201549,
+        "prior_median": 12.498295335803256,
+        "posterior_median": 13.449776274644211,
+        "prior_median_absolute_error": 1.330689049398293,
+        "posterior_median_absolute_error": 0.3792081105573377,
+        "prior_q05": 12.498295335803256,
+        "prior_q95": 15.28858462281592,
+        "posterior_q05": 12.498295335803256,
+        "posterior_q95": 16.41823891549117
+      },
+      "minimum_depth": {
+        "truth": 0.7612888881366912,
+        "prior_median": 1.0,
+        "posterior_median": 0.8772067004084603,
+        "prior_median_absolute_error": 0.23871111186330884,
+        "posterior_median_absolute_error": 0.11591781227176912,
+        "prior_q05": 0.7697154081727919,
+        "prior_q95": 1.0,
+        "posterior_q05": 0.6993619072641939,
+        "posterior_q95": 0.9390650271883181
+      }
+    },
+    "predictive": {
+      "terminal_return": {
+        "truth": 0.0020099351943685395,
+        "prior_median": 0.002094875561897469,
+        "posterior_median": 0.002063608839549924,
+        "prior_median_absolute_error": 8.494036752892953e-05,
+        "posterior_median_absolute_error": 5.367364518138462e-05,
+        "prior_q05": 0.0019975976958271358,
+        "prior_q95": 0.002094875561897469,
+        "posterior_q05": 0.0019775737305095854,
+        "posterior_q95": 0.0020872215934990336
+      },
+      "max_drawdown": {
+        "truth": 0.041315222759682135,
+        "prior_median": 0.027794303238036666,
+        "posterior_median": 0.030415967906761765,
+        "prior_median_absolute_error": 0.01352091952164547,
+        "posterior_median_absolute_error": 0.01089925485292037,
+        "prior_q05": 0.027794303238036666,
+        "prior_q95": 0.040505721600724125,
+        "posterior_q05": 0.028822477360341714,
+        "posterior_q95": 0.0458055231132153
+      },
+      "peak_spread_bps": {
+        "truth": 20.580968758340767,
+        "prior_median": 15.493420539599457,
+        "posterior_median": 18.602662217609137,
+        "prior_median_absolute_error": 5.0875482187413095,
+        "posterior_median_absolute_error": 1.97830654073163,
+        "prior_q05": 15.493420539599457,
+        "prior_q95": 21.88710052298326,
+        "posterior_q05": 16.85099463774698,
+        "posterior_q95": 22.30150936300665
+      },
+      "minimum_depth": {
+        "truth": 0.6741006238815009,
+        "prior_median": 1.0,
+        "posterior_median": 0.8007198391418477,
+        "prior_median_absolute_error": 0.32589937611849906,
+        "posterior_median_absolute_error": 0.1266192152603468,
+        "prior_q05": 0.6449991711284377,
+        "prior_q95": 1.0,
+        "posterior_q05": 0.6256602922141604,
+        "posterior_q95": 0.8925450758966682
+      }
+    },
+    "holdout_response": {
+      "prior_median_rmse": 1.8962915796617277,
+      "posterior_median_rmse": 0.9339475248478899,
+      "relative_median_reduction": 0.507487384922896,
+      "prior_q05": 0.7506679600439323,
+      "prior_q95": 2.413608803977195,
+      "posterior_q05": 0.39337132953266035,
+      "posterior_q95": 1.5388687915052413
+    },
+    "limitations": [
+      "The true world is synthetic and belongs to the same parametric family as the bank.",
+      "Candidate selection uses common innovations to isolate structural identification; the reported response check uses an independent innovation stream and two held-out doses.",
+      "Rejection ABC is a proof of concept, not a production posterior or a causal estimate on real data."
+    ]
+  },
+  "claims_supported": [
+    "Within this declared simulator, distinct hidden structures can generate identical passive observables.",
+    "Within this declared simulator, the same intervention and same innovations can reveal different responses.",
+    "A finite active probe can reduce a synthetic candidate-world set under a same-family ABC prototype."
+  ],
+  "claims_not_supported": [
+    "That real market prices are generated by these specific hidden states.",
+    "That the model predicts tradable alpha or is profitable.",
+    "That the latent state of a real market is uniquely identifiable."
+  ],
+  "limitations": [
+    "The true world is synthetic and belongs to the same parametric family as the bank.",
+    "Candidate selection uses common innovations to isolate structural identification; the reported response check uses an independent innovation stream and two held-out doses.",
+    "Rejection ABC is a proof of concept, not a production posterior or a causal estimate on real data."
+  ],
+  "implementation_boundary": {
+    "current_stage": "synthetic_same_family_proof_of_concept",
+    "implemented": [
+      "transparent synthetic market generator",
+      "finite candidate-world bank",
+      "active-probe rejection ABC",
+      "independent synthetic holdout"
+    ],
+    "not_implemented": [
+      "real-market calibration",
+      "learned candidate-world generator",
+      "production Bayesian posterior",
+      "counterfactual robust planner",
+      "physical robot validation"
+    ],
+    "terminal_target": {
+      "name": "Active Multi-Hypothesis World Model",
+      "status": "aspirational_not_implemented",
+      "outputs": [
+        "candidate world distribution",
+        "conditional future branching tree",
+        "next informative low-risk probe",
+        "robust action across plausible worlds"
+      ]
+    }
+  }
+}

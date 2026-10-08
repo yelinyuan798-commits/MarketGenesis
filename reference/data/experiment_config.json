@@ -1,0 +1,63 @@
+{
+  "n_pre": 240,
+  "n_post": 120,
+  "shock_steps": 5,
+  "doses": [
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+  ],
+  "n_replicates": 320,
+  "noise_sigma": 0.00032,
+  "fundamental_reversion": 0.055,
+  "quiet_momentum": 0.035,
+  "shock_flow_per_step": 0.24,
+  "price_impact": 0.0125,
+  "root_seed": 20260830,
+  "bootstrap_draws": 2500,
+  "abc_bank_size": 700,
+  "abc_accept_fraction": 0.1,
+  "abc_probe_dose": 1.5,
+  "abc_probe_horizon": 18,
+  "abc_holdout_doses": [
+    2.0,
+    4.0
+  ],
+  "abc_holdout_horizon": 30,
+  "abc_holdout_seed_offset": 99999,
+  "stable_parameters": {
+    "name": "stable",
+    "leverage": 1.8,
+    "latent_inventory": 0.42,
+    "margin_buffer": 0.052,
+    "liquidation_base": 0.018,
+    "liquidation_gain": 2.2,
+    "crowding": 0.45,
+    "liquidity_withdrawal": 4.0,
+    "liquidity_inventory_sensitivity": 0.18
+  },
+  "fragile_parameters": {
+    "name": "fragile",
+    "leverage": 5.8,
+    "latent_inventory": 0.9,
+    "margin_buffer": 0.019,
+    "liquidation_base": 0.035,
+    "liquidation_gain": 5.0,
+    "crowding": 0.75,
+    "liquidity_withdrawal": 6.0,
+    "liquidity_inventory_sensitivity": 0.28
+  },
+  "abc_truth_parameters": {
+    "name": "abc_truth",
+    "leverage": 5.2,
+    "latent_inventory": 0.82,
+    "margin_buffer": 0.021,
+    "liquidation_base": 0.032,
+    "liquidation_gain": 4.5,
+    "crowding": 0.68,
+    "liquidity_withdrawal": 5.4,
+    "liquidity_inventory_sensitivity": 0.24
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "checks": {
+    "required_files": {
+      "passed": true,
+      "missing": []
+    },
+    "finite_metrics": {
+      "passed": true
+    },
+    "row_count": {
+      "passed": true,
+      "actual": 3200
+    },
+    "dose_grid": {
+      "passed": true,
+      "actual": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ]
+    },
+    "exact_pre_twins": {
+      "passed": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "zero_dose_control": {
+      "passed": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "representative_pre_recomputed": {
+      "passed": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "abc_bank_shape": {
+      "passed": true,
+      "actual_rows": 700,
+      "expected_rows": 700,
+      "parameter_columns": 8
+    },
+    "abc_unique_candidate_worlds": {
+      "passed": true,
+      "unique_names": 700,
+      "unique_parameter_rows": 700
+    },
+    "abc_declared_parameter_ranges": {
+      "passed": true,
+      "invalid_parameters": []
+    },
+    "abc_generation_metadata": {
+      "passed": true
+    },
+    "abc_bank_replays_from_declared_seed": {
+      "passed": true,
+      "seed": 20338607
+    },
+    "abc_acceptance_count": {
+      "passed": true,
+      "actual": 70,
+      "expected": 70
+    },
+    "abc_acceptance_matches_probe_ranking": {
+      "passed": true,
+      "mismatched_name_count": 0
+    },
+    "abc_independent_holdout": {
+      "passed": true
+    },
+    "terminal_target_marked_not_implemented": {
+      "passed": true
+    },
+    "abc_passive_nonidentifiability": {
+      "passed": true,
+      "maximum_absolute_distance": 0.0
+    },
+    "summary_complete": {
+      "passed": true,
+      "actual": 25
+    },
+    "figures_readable": {
+      "passed": true
+    }
+  }
+}

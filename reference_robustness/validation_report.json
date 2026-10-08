@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": {
+    "required_files": true,
+    "twenty_unique_root_seeds": true,
+    "no_path_seed_collisions": true,
+    "dose_path_row_count": true,
+    "abc_candidate_row_count": true,
+    "abc_700_unique_candidates_per_batch": true,
+    "abc_70_accepted_per_batch": true,
+    "abc_generation_seeds_follow_formula": true,
+    "abc_probe_holdout_streams_are_distinct": true,
+    "finite_root_metrics": true,
+    "preregistration_unchanged": true,
+    "figures_readable": true,
+    "abc_accepted_sets_match_probe_ranking": true,
+    "abc_parameters_within_declared_ranges": true,
+    "abc_improvement_counts_recomputed": true
+  },
+  "note": "Pipeline PASS is separate from the predeclared scientific gates in multiseed_report.json."
+}
